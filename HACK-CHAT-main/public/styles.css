@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+::selection {
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+::-webkit-selection {
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #000000;
+    color: #00ff00;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Landing Page */
+#landing-page {
+    text-align: center;
+}
+
+#landing-page h1 {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    margin-bottom: 20px;
+    margin-top: 29%;
+
+}
+
+#landing-page input {
+    padding: 10px;
+    margin: 20px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #00ff00;
+    outline: none;
+}
+
+#landing-page input:focus {
+    border-color: red;
+}
+
+
+
+#landing-page button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#landing-page button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Room Selection Page */
+#room-selection-page {
+    text-align: center;
+}
+
+#room-selection-page h2 {
+    color: #00ff00;
+    margin-bottom: 20px;
+    margin-top: 20%;
+    font-size: 60px;
+}
+
+#room-selection-page input {
+    padding: 10px;
+    margin: 20px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #00ff00;
+    outline: none;
+}
+
+#room-selection-page input:focus {
+    border-color: red;
+}
+
+#room-selection-page button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#room-selection-page button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+.or {
+    margin: 30px;
+    font-size: 18px;
+    color: #00ff00;
+}
+
+/* Chat Room */
+#chat-room-page {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-between;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff00;
+    color: #000000;
+    padding: 10px 20px;
+}
+
+.chat-header h3 {
+    margin: 0;
+}
+
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #000000;
+    border-top: 1px solid #00ff00;
+    border-bottom: 1px solid #00ff00;
+}
+
+/* Updated message styling */
+.message-container {
+    margin-bottom: 15px;
+}
+
+.message-user {
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 4px;
+}
+
+.message-content {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #001a00;
+    display: inline-block;
+    max-width: 80%;
+    color: #00ff00;
+}
+
+.message-container.own-message {
+    text-align: right;
+}
+
+.message-container.own-message .message-user {
+    color: #eeff00;
+}
+
+.message-container.own-message .message-content {
+    background-color: #003300;
+}
+
+#chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px;
+    gap: 10px;
+}
+
+#chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #00ff00;
+    outline: none;
+}
+
+#chat-input button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#chat-input button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* File input styling */
+#file-input {
+    display: none;
+}
+
+#file-input+label {
+    padding: 6px 20px;
+    font-size: 26px;
+    font-weight: bolder;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#file-input+label:hover {
+    background-color: #00ff00;
+    color: rgb(0, 0, 0);
+}
+
+#leave-room {
+    background-color: red;
+    color: white;
+    font-size: medium;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* File Progress Bar */
+#file-progress {
+    margin-top: 10px;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #001a00;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar div {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+#progress-text {
+    color: #00ff00;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #chat-input {
+        flex-wrap: wrap;
+    }
+
+    #chat-input input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+#copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #ff0000;
+
+}
+
+#copy-btn:hover {
+    transform: scale(1.2);
+}
+
+.copied-message {
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #04ff00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.message-content {
+    cursor: pointer;
+}

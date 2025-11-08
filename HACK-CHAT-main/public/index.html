@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACK CHAT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="icon" href="hack-chat-logo.ico">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page">
+            <h1 >Welcome to HACK CHAT</h1>
+            <input type="text" id="username" placeholder="Enter your hacker alias" />
+            <button id="start-chat">Infiltrate</button>
+        </div>
+
+        <!-- Room Selection -->
+        <div id="room-selection-page" class="page hidden">
+            <h2>Greetings, <span id="display-name"></span></h2>
+            <button id="create-room">Create Secure Channel</button>
+            <div class="or">OR</div>
+            <input type="text" id="room-id" placeholder="Enter Channel ID" />
+            <button id="join-room">Join Secure Channel</button>
+        </div>
+
+        <!-- Chat Room -->
+        <div id="chat-room-page" class="page hidden">
+            <div class="chat-header">
+                <h3>
+                    Channel ID: 
+                    <span id="room-name"></span> 
+                    <button id="copy-btn" title="Copy Channel ID">❐</button>
+                </h3>
+                <button id="leave-room">Terminate Connection</button>
+            </div>
+            <div id="messages"> </div>
+            <div id="chat-input">
+                <input type="text" id="message" placeholder="Enter your message..." />
+                <button id="send-message">Transmit</button>
+                <input type="file" id="file-input" />
+                <label for="file-input">+</label>
+                <button id="send-file">Send File</button>
+            </div>
+            <div id="file-progress" class="hidden">
+                <div id="progress-bar">
+                    <div></div>
+                </div>
+                <div id="progress-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
